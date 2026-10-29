@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "description": "Configuration profile for Linux File Integrity Monitor (FIM)",
+  "settings": {
+    "hash_algorithm": "sha256",
+    "chunk_size_bytes": 65536,
+    "follow_symlinks": false,
+    "baseline_file": "baseline.json",
+    "log_file": "logs/fim_audit.log",
+    "events_jsonl": "logs/fim_events.jsonl",
+    "reports_dir": "reports"
+  },
+  "monitoring": {
+    "monitored_paths": [
+      "sample-data/etc",
+      "sample-data/bin",
+      "sample-data/var/log"
+    ],
+    "production_linux_targets_reference": [
+      "/etc/passwd",
+      "/etc/shadow",
+      "/etc/sudoers",
+      "/etc/ssh/sshd_config",
+      "/etc/crontab",
+      "/etc/cron.*",
+      "/etc/pam.d",
+      "/bin",
+      "/sbin",
+      "/usr/bin",
+      "/usr/sbin",
+      "/boot"
+    ],
+    "exclude_patterns": [
+      "*.tmp",
+      "*.swp",
+      "*.bak",
+      "*.pyc",
+      "__pycache__/*",
+      "*.git/*"
+    ],
+    "critical_path_patterns": [
+      "*passwd*",
+      "*shadow*",
+      "*sudoers*",
+      "*sshd_config*",
+      "*/bin/*",
+      "*/sbin/*",
+      "*/boot/*"
+    ]
+  },
+  "reporting": {
+    "default_format": "markdown",
+    "auto_save_on_scan": true
+  }
+}

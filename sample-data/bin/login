@@ -1,0 +1,5 @@
+#!/bin/sh
+# System login helper routine mock binary
+# Copyright (c) 2026 Linux Standard System
+echo "Initiating PAM authentication sequence..."
+exit 0

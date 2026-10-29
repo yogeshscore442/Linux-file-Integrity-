@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# FIM Runtime artifacts (ignore generated runtime files, keep directory READMEs)
+baseline.json
+baseline.json.tmp
+baseline.json.bak
+logs/*.log
+logs/*.jsonl
+!logs/README.md
+reports/*.md
+reports/*.json
+reports/*.txt
+!reports/README.md
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

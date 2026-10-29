@@ -1,0 +1,6 @@
+# Linux File Integrity Monitor (FIM)
+# Core implementation uses Python standard library only for maximum portability,
+# zero external dependency friction, and production-grade reliability.
+
+# Optional enhancements (FIM gracefully falls back to standard library if not present):
+# colorama>=0.4.6   # Cross-platform terminal coloring
